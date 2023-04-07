@@ -1,0 +1,104 @@
+\documentclass{article}
+
+\usepackage{arxiv}
+
+\usepackage{hyperref}       % hyperlinks (but not footnotes: bug points links to titlepage)
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{setspace}		% line spacing
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{natbib}
+\usepackage{doi}
+\usepackage{xcolor}
+
+\usepackage[T1]{fontenc}	% font encoding
+\usepackage{palatino}		% font typefaces
+
+\graphicspath{{figures/}}
+
+%%
+%% Circled numbers
+%%
+\usepackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+
+%%
+%% Line spacing
+%%
+\setstretch{1.36} 
+
+\title{Exploring the Role of Adaptive Hybrid Intelligent Systems on Competitive Advantage: The Case of the STM Publishing Industry}
+
+\author{Dietrich Rordorf\\
+	\href{mailto:dietrichhanspaul.rordorf@students.fhnw.ch}{dietrichhanspaul.rordorf@students.fhnw.ch} \\
+	\AND
+	Supervisor: Dr. Emanuele Laurenzi \\
+	\\
+	School of Business \\
+	University of Applied Sciences and Arts Northwestern Switzerland \\
+	Riggenbachstrasse 16 \\
+	CH-4600 Olten \\
+	Switzerland \\
+}
+\date{
+	MSc Business Information Systems Program \\
+	Emerging Topics, SS 2023
+}
+
+% Uncomment to remove the date
+%\date{}
+
+% Uncomment to override  the `A preprint' in the header
+\renewcommand{\headeright}{Draft}
+\renewcommand{\undertitle}{Semester Paper}
+\renewcommand{\shorttitle}{Competitive Advantage of Hybrid Intelligent Systems}
+
+%%% Links within PDF and PDF metadata
+\hypersetup{
+	unicode=true,
+	bookmarksopen={true},
+	pdffitwindow=true,
+	colorlinks=true,
+	allcolors=black,
+	hidelinks=false,
+	hyperfootnotes=false,
+	pdfstartview={FitH},
+	pdfpagemode=UseNone,
+	pdftitle={Enhancing Enterprise Competitiveness through Adaptive AI Systems},
+	pdfauthor={Dietrich Rordorf},
+	pdfkeywords={artificial intelligence, hybrid intelligence, adaptive AI systems, enterprise competitiveness},
+}
+
+\begin{document}
+
+%%% Title page
+\maketitle
+\input{content/01_abstract}
+
+%%% Table of contents
+\newpage
+\tableofcontents
+\newpage
+
+%%% Content sections
+\input{content/02_introduction}
+\input{content/03_literature_review}
+\input{content/04_methods}
+\input{content/05_results}
+\input{content/06_discussion}
+
+%%% References
+\bibliographystyle{hapalike}
+\bibliography{references}
+
+%%% Appendix
+\newpage
+\appendix
+\input{content/99_appendix}
+
+\end{document}
