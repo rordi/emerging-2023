@@ -11,9 +11,11 @@
 \usepackage{setspace}		% line spacing
 \usepackage{lipsum}
 \usepackage{graphicx}
-\usepackage{natbib}
 \usepackage{doi}
+\renewcommand{\doitext}{}	% avoid "doi: doi:" in references
+
 \usepackage{xcolor}
+\usepackage[natbibapa]{apacite}
 
 \usepackage[T1]{fontenc}	% font encoding
 \usepackage{palatino}		% font typefaces
@@ -93,7 +95,7 @@
 \input{content/06_discussion}
 
 %%% References
-\bibliographystyle{hapalike}
+\bibliographystyle{apacite}
 \bibliography{references}
 
 %%% Appendix
