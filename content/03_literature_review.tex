@@ -1,38 +1,54 @@
 \section{Literature Review}
 \label{sec:literature}
 
-In this section we inform a background on different types of artificial intelligence, hybrid intelligence, 
+In this section we inform a background on different types of artificial intelligence (AI), hybrid intelligence, 
 design patterns and principles for hybrid intelligent systems, and the competitive advantage arising from
 the use of such systems in enterprises.
 
-According to \cite{russel2010} artificial intelligence is the creation of computer programs and algorithms
-that allow machines to replicate human cognition and behavior, which includes the capabilities of learning, perception,
-reasoning, solving problems, and making decisions. Artificial intelligence can be broadly subdivided into symbolic
-and sub-symbolic approaches, see e.g., \cite{eliasmithSymbolicSubsymbolic2006}. Symbolic approaches involve the 
-use of explicit symbols and rules to represent knowledge and reason in a way that is easily understood and explainable
-by humans, while sub-symbolic approaches aim to learn complex patterns from vast amounts of data using neural networks
-\citep{ilkouSymbolicVsSubsymbolic2020}.
+\subsection{Categorization of AI}
 
-Hybrid artificial intelligence refers to systems involving symbolic and sub-symbolic approaches. Hybrid AI systems
-can be anywhere from loosely coupled to tightly integrated \citep{garcezNeurosymbolicAI3rd2020}. Loosely coupled
-hybrid AI systems typically involve a human, which is also known as \textit{human in the loop} (HITL) computing. Within
-tightly integrated hybrid AI approaches, neurosymbolic AI has recently earned a particular research interest as a way to
-overcome the limitations of deep learning, such as lack of explainability, susceptibility to adversarial attacks
-(data poisoning) and high computational cost \citep{garcezNeurosymbolicAI3rd2020}.
+According to \cite{russel2010} AI is the creation of computer programs and algorithms that allow machines to
+replicate human cognition and behavior, which includes the capabilities of learning, perception, reasoning,
+solving problems, and making decisions. AI can be broadly subdivided into symbolic and sub-symbolic approaches,
+see e.g., \cite{eliasmithSymbolicSubsymbolic2006}. Symbolic approaches involve the use of explicit symbols and
+rules to represent knowledge and reason in a way that is easily understood and explainable by humans, while sub-symbolic
+(or \textit{connectionist}) approaches aim to learn complex patterns from vast amounts of data using neural
+networks \citep{ilkouSymbolicVsSubsymbolic2020}.
 
-Hybrid intelligence (HI) refers to systems where humans and AI systems work together towards common
-goals, augmenting the human intellect and overcoming human limitations and cognitive biases \citep{akataResearchAgendaHybrid2020}.
-Such HI systems show the  potential for improving the outcomes of AI systems, hence augmenting rather than replacing
-human intelligence \cite[p. 19]{akataResearchAgendaHybrid2020}. HI systems can be represented by a boxology notation with certain
-design patterns describing the commonalities of such systems that emerge \citep{harmelenBoxologyDesignPatterns2019,
-vanbekkumModularDesignPatterns2021,witschelVisualizationPatternsHybrid2021}. HI has recently received attention from
-the leaders in the field: in his presidential address to the AAAI community, 
-\cite{kambhampatiChallengesHumanAwareAI2020} demanded that AI researchers build human-aware AI systems that consider the 
-human mental model. In particular, AI systems should show the capabilities of explicability (AI agents should show
-behavior that is expected by humans) and explainability (AI agents -- if behaving unexpectedly -- should be able to provide
-an explanation) \citep{kambhampatiChallengesHumanAwareAI2020}.
+Hybrid AI refers to systems involving symbolic and sub-symbolic approaches. Hybrid AI systems can be anywhere from
+loosely coupled to tightly integrated \citep{garcezNeurosymbolicAI3rd2020}. Loosely coupled hybrid AI systems typically
+involve a human, which is also known as \textit{human in the loop} (HITL) computing. In such systems the humans and
+AI work together towards common goals, augmenting the human intellect and overcoming human limitations and cognitive
+biases \citep{akataResearchAgendaHybrid2020}. The hybrid systems show the  potential for improving the outcomes of AI
+systems, hence \textit{augmenting} rather than replacing human intelligence \citep{akataResearchAgendaHybrid2020}.
+Within tightly integrated hybrid AI approaches, neurosymbolic AI has earned a particular research interest as a possible
+way to overcome the limitations of deep learning, such as lack of explainability, susceptibility to adversarial attacks
+(data poisoning) and high computational cost \citep{garcezNeurosymbolicAI3rd2020}. Hybrid intelligence has recently
+received attention from the leaders in the field: in his presidential address to the AAAI community, 
+\cite{kambhampatiChallengesHumanAwareAI2020} demanded that AI researchers build human-aware AI systems that consider
+the human mental model. In particular, AI researchers should aim at systems that show the capabilities of \textit{explicability}
+(AI agents should show behavior that is expected by humans) and \textit{explainability} (AI agents -- if behaving unexpectedly -- 
+should be able to provide an explanation) \citep{kambhampatiChallengesHumanAwareAI2020}.
 
-\subsection{Design Principles Hybrid Intelligent Systems}
+Another way to categorize AI is by the breadth of application. The 
+- Narrow AI
+
+- Neuro-symbolic AI as a promising way to reach broad AI \citep{@hochreiterBroadAI2022}.
+
+- General AI, also Artificial General Intelligence (AGI)
+
+
+Hybrid AI architectures:
+
+- Agents
+
+- 
+
+
+\subsection{Design Principles for Hybrid Intelligent Systems}
+
+Hybrid AI systems can be represented by a boxology notation with common design patterns \citep{harmelenBoxologyDesignPatterns2019,
+vanbekkumModularDesignPatterns2021,witschelVisualizationPatternsHybrid2021}.
 
 \cite{ostheimerAllianceHumansMachines2021} developed a framework of eight principles for the design of human-in-the-loop (HITL) 
 computing. They argue that such hybrid systems achieve higher accuracy and reliability of machine learning algorithms. Using a 

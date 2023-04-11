@@ -11,3 +11,56 @@ Hypotheses from the literature:
 \end{itemize}
 
 
+
+\subsection{Typical Editorial Process}
+
+The typical editorial process for a manuscript submitted to a scholarly journal looks like the following:
+
+\begin{itemize}
+    \item Author makes sure the manuscript format meets the journal's guidelines.
+    \item Author submits manuscript via online submission system.
+    \item Editor receives submission.
+    \item Editor conducts desk review.
+    \item Editor searches for potential reviewers.
+    \item Editor invited potential reviewers.
+    \item Reviewer reads the manuscript.
+    \item Reviewer writes review report.
+    \item Editor reads all review reports.
+    \item Editor makes decision.
+    
+\end{itemize}
+
+
+\begin{landscape}
+    \subsection{Potential Use Cases For (Hybrid) AI in the Editorial Process}
+
+    \begin{table}[h!]
+        \label{tab:editorialprocess}
+        \caption{Use cases for hybrid AI in a typical editorial process for a journal.}
+        \renewcommand{\arraystretch}{1.25}
+        \small\centering
+        \setlength\tabcolsep{6pt}
+        \begin{tabularx}{\linewidth}{l l l X}
+            \toprule
+            \textbf{Step} & \textbf{Role} & \textbf{Task} & \textbf{Use Cases for Hybrid AI} \\
+            \hline \\
+
+            S01 & Author & Writes manuscript & AI-aided writing, translating, grammar and spell-checking, AI-aided literature
+                search and literature review \\
+            S02 & Author & Searches for journals to submit to & Decision support system with AI-guided journal recommendation
+                based on word embeddings of the manuscript and knowledge engineering using the academic graph\\
+            S03 & Author & Formats paper to meet journal's requirements & AI-assisted conversion and formatting of manuscript
+                and references, knowledge engineering-based completion of references metadata \\
+            S04 & Author & Submits paper to a journal & AI-aided extraction of metadata from the manuscript file \\
+            S05 & Editor & Receives manuscript submission & AI-generated summary of the manuscript \\
+            S06 & Editor & Desk reviews the manuscript & Decision support system with AI-assisted checks of the manuscript,
+                including detecting plagiarism, tortured phrases ("paraphrased plagiarism"), biased or inappropriate language,
+                off-topic references, fabricated or manipulated images, potentially inappropriate authorship, controversial
+                topics, etc. Manuscripts are flagged by problem type, ideally by providing examples from within the manuscript,
+                for the editor to investigate.\\
+            \bottomrule
+        \end{tabularx}
+    \end{table}
+\end{landscape}
+
+
