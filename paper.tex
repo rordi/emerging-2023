@@ -6,6 +6,8 @@
 \usepackage{url}            % simple URL typesetting
 \usepackage{booktabs}       % professional-quality tables
 \usepackage{amsfonts}       % blackboard math symbols
+\usepackage[T1]{fontenc}	% font encoding
+\usepackage{palatino}		% font typefaces
 \usepackage{nicefrac}       % compact symbols for 1/2, etc.
 \usepackage{microtype}      % microtypography
 \usepackage{setspace}		% line spacing
@@ -14,13 +16,12 @@
 \usepackage{tabularx}
 \usepackage{pdflscape}
 \usepackage{doi}
-\renewcommand{\doitext}{}	% avoid "doi: doi:" in references
+\renewcommand{\doitext}{}	% avoid "doi: doi:" in references lists
 
 \usepackage{xcolor}
-\usepackage[natbibapa]{apacite}
+\usepackage[natbibapa]{apacite} % APA 6th ed. styling for citations and references list
 
-\usepackage[T1]{fontenc}	% font encoding
-\usepackage{palatino}		% font typefaces
+
 
 \graphicspath{{figures/}}
 
@@ -29,12 +30,12 @@
 %%
 \usepackage{tikz}
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
-            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+	\scriptsize\node[shape=circle,draw,inner sep=1pt] (char) {#1};}}
 
 %%
 %% Line spacing
 %%
-\setstretch{1.36} 
+\setstretch{1.32} 
 
 \title{Exploring the Role of Adaptive Hybrid Intelligent Systems on Competitive Advantage: The Case of the STM Publishing Industry}
 
