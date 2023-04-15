@@ -1,54 +1,83 @@
 \section{Literature Review}
 \label{sec:literature}
 
-In this section we inform a background on different types of artificial intelligence (AI), hybrid intelligence, 
-design patterns and principles for hybrid intelligent systems, and the competitive advantage arising from
-the use of such systems in enterprises.
+This section provides an overview of artificial intelligence (AI), including hybrid or augmented intelligence,
+adaptive AI, design patterns for hybrid intelligent systems, and how the use of such systems in enterprises can
+create a competitive advantage.
 
-\subsection{Hybrid AI}
+\subsection{Overview of Artificial Intelligence}
 
 AI involves the creation of computer programs and algorithms that allow machines to replicate human cognition and behavior,
-which includes the capabilities of perception, learning, reasoning, solving problems, and making decisions \citep{russel2010}.
-AI can be broadly subdivided into symbolic and sub-symbolic approaches, see e.g., \cite{eliasmithSymbolicSubsymbolic2006}.
-Symbolic approaches involve the use of explicit symbols and rules to represent knowledge and reason in a way that is easily
-understood and explainable by humans, while sub-symbolic (or \textit{connectionist}) approaches aim to learn complex patterns
-from vast amounts of data using neural networks \citep{ilkouSymbolicVsSubsymbolic2020}. Hybrid AI refers to systems combining
-symbolic and sub-symbolic approaches. Hybrid AI systems can be anywhere from loosely coupled to tightly integrated
-\citep{garcezNeurosymbolicAI3rd2023}.
+which includes the capabilities of perception, learning, reasoning, solving problems, and making decisions. AI can be broadly
+subdivided into symbolic and sub-symbolic approaches, see e.g., \cite{eliasmithSymbolicSubsymbolic2006}. Symbolic approaches
+involve the use of explicit symbols and rules to represent knowledge and reason in a way that is easily understood and explainable
+by humans, while sub-symbolic (or \textit{connectionist}) approaches aim to learn complex patterns from vast amounts of data
+using neural networks \citep{ilkouSymbolicVsSubsymbolic2020}. Hybrid AI refers to systems combining symbolic and sub-symbolic
+approaches. Hybrid AI systems can be anywhere from loosely coupled to tightly integrated \citep{garcezNeurosymbolicAI3rd2023}.
 
 Loosely coupled hybrid AI systems typically involve a human, which is also known as \textit{human in the loop} (HITL)
 computing. In such systems the humans and AI work together towards common goals, augmenting the human intellect and
-overcoming human limitations and cognitive biases \citep{akataResearchAgendaHybrid2020}. Hybrid AI systems show the
-potential for improving the outcomes of AI systems, hence \textit{augmenting} rather than replacing human intelligence
-\citep{akataResearchAgendaHybrid2020}. Hybrid approaches to AI have recently received attention from the leaders in
-the field as a response to an ever increased focus on sub-symbolic approaches and deep learning in particular. In his
-presidential address to the members of the Association for the Advancement of Artificial Intelligence (AAAI),
-\cite{kambhampatiChallengesHumanAwareAI2020} has demanded that AI researchers build human-aware AI systems that work
-synergistically with humans, including considering the human mental state, recognizing desires and intentions, and
-providing proactive support to humans. In particular, AI researchers should aim at systems that show the capabilities
-of \textit{explicability} (AI agents should show behavior that is expected by humans) and \textit{explainability}
-(AI agents -- if behaving unexpectedly -- should be able to provide an explanation) \citep{kambhampatiChallengesHumanAwareAI2020}.
+overcoming human limitations and cognitive biases \citep{akataResearchAgendaHybrid2020}. \cite{akataResearchAgendaHybrid2020}
+refer to this combination of human and machine intelligence as \textit{hybrid intelligence}. The concept is also known as
+intelligence augmentation and amplification, see e.g., \cite{schmidtAugmentingHumanIntellect2017} and
+\cite{zhouIntelligenceAugmentationBuilding2021}. It can be traced back to Joseph Licklider's ``man-computer symbiosis'' and the
+idea of increasing human capabilities trough better and faster machine understanding, which was popularized by Douglas Engelbart
+in the 1960ies \citep[and references cited therein]{schmidtAugmentingHumanIntellect2017}. With the advanced and ubiquitous
+digital technologies now available, hybrid intelligent systems show the potential for improving the outcomes of AI systems, 
+hence \textit{augmenting} rather than replacing human intelligence \citep{schmidtAugmentingHumanIntellect2017,akataResearchAgendaHybrid2020}.
+Hybrid intelligent systems have recently received attention from the leaders in the field as a response to an ever increased
+focus on sub-symbolic approaches and deep learning in particular. In his presidential address to the members of the Association
+for the Advancement of Artificial Intelligence (AAAI), \cite{kambhampatiChallengesHumanAwareAI2020} has demanded that AI
+researchers build human-aware AI systems that work synergistically with humans, including considering the human mental state,
+recognizing desires and intentions, and providing proactive support to humans. In particular, AI researchers should aim
+at systems that show the capabilities of \textit{explicability} (AI agents should show behavior that is expected by
+humans) and \textit{explainability} (AI agents -- if behaving unexpectedly -- should be able to provide an explanation)
+\citep{kambhampatiChallengesHumanAwareAI2020}.
 
 Such human-aware AI systems act as a human collaborator and must \textit{"sense, understand, and react to a wide
 range of complex human behavioral qualities, like attention, motivation, emotion, creativity, planning, or argumentation"}
-\citep{kortelingHumanArtificialIntelligence2021}. \cite{kortelingHumanArtificialIntelligence2021} further argue that the
-pursuit of human-level intelligence is the wrong approach to AI. Due to the dissimilar nature of human and machine
-intelligence, AI systems would need at some point to be \textit{degraded}: the physical substrate (biological,
-respectively digital) determines the cognitive abilities and limitations of human \textit{versus} artificial
-intelligence, with human cognitive faculties being limited by the biological and evolutionary origin of intelligence
-\citep{kortelingHumanArtificialIntelligence2021}. They conclude that AI systems that support human decision-making
-appear to be the best way forward for implementing better solutions, even if this means that we stick to narrow AI
- for the foreseeable future \citep{kortelingHumanArtificialIntelligence2021}.
+\citep{kortelingHumanArtificialIntelligence2021}. To reach human-level intelligence, some argued that AI systems would
+need to be \textit{degraded} at some point due to the dissimilar nature of human and machine intelligence
+\citep{kortelingHumanArtificialIntelligence2021}.
+The physical substrate (biological, respectively digital) determines the cognitive abilities and limitations of human
+\textit{versus} artificial intelligence, with human cognitive faculties being limited by the biological and evolutionary
+origin of intelligence \citep{kortelingHumanArtificialIntelligence2021}. Further, \cite{kortelingHumanArtificialIntelligence2021}
+argue that the pursuit of Artificial General Intelligence (AGI), i.e., machines reaching human-level intelligence, may
+be a misleading goal due to these limitations of human intelligence. They conclude that AI systems that support human
+decision-making appear to be the best way forward for implementing better solutions, even if this means that we stick
+to narrow AI for the foreseeable future \citep{kortelingHumanArtificialIntelligence2021}.
 
-Narrow AI refers to AI applications that have been trained with specific data for narrowly defined use cases,
-typically yielding good performances on a single, predefined task. Hence, narrow AI applications typically lack
+The concept of narrow AI refers to AI applications that have been trained with specific data for narrowly defined use
+cases, typically yielding good performances on a single, predefined task. Hence, narrow AI applications typically lack
 versatility: due to the limited amount and variety of training data, changing the use case of the AI typically
 requires re-training a new model with different training data. On the other side, narrow AI application require fewer
-data points and compute time for training compared to broad AI and may thus be re-trained more frequently or continuously
-trained on new data (i.e., online training). Further, narrow AI models have a smaller number of parameters (i.e., weights,
-biases) and thus also require less compute time and resources at inference time. In contrast, broad AI applications such
-as foundation models are sophisticated and adaptive systems that successfully perform different cognitive tasks by virtue
-of their sensory perception, computational learning, and previous experience \citep{hochreiterBroadAI2022}. 
+data points and compute time for training and may thus be re-trained more frequently or continuously trained on new data
+(i.e., online training). Further, narrow AI models have a smaller number of parameters (i.e., weights, biases) and
+thus also require less compute time and resources at inference time. In contrast, broad AI applications such
+as large language models (LLMs) and foundation models are sophisticated and adaptive systems that successfully perform
+different cognitive tasks by virtue of their sensory perception, computational learning, and previous
+experience \citep{hochreiterBroadAI2022}. LLMs were originally designed as large neural networks trained on vast amounts
+of textual data collected from the Internet. Recently a number of such large models were trained with multimodal data,
+including text, images, speech, and video \citep{bommasaniOpportunitiesRisksFoundation2022}. The resulting broad AI models
+are good at a wide variety of tasks with the performance being often close to that of specialized narrow AI models
+\citep{bommasaniOpportunitiesRisksFoundation2022}. However, broad AI models show severe limitations in their capabilities
+of reasoning and information retrieval. Thus, the term \textit{foundation model} was proposed by researchers at
+the Human-centered AI (HAI) institute of the Stanford University to better reflect the nature of the multimodal 
+training data and the severe limitations that remain in these models \citep{bommasaniOpportunitiesRisksFoundation2022}.
+
+
+
+\begin{itemize}
+    \item Foundation models represent a paradigm shift in AI
+    \item ChatGPT as a chatbot is highly interactive: user has to prompt AI (although it is an unexplainable black box)
+    \item Emerging capability in foundation models: in-context learning 
+    \item In-context learning is highly adaptable: AI can learn from examples in the prompt 
+\end{itemize}
+
+
+
+{\color{purple} @todo: here we can insert one paragraph about foundation models and LLMs, and their strong limitations
+(thus, again making the connection to and a strong point for hybrid intelligence)\dots}
 
 Neurosymbolic AI -- a tightly integrated hybrid
 AI approach -- is a promising approach to reach broad AI as it may eventually overcome the limitations of deep learning, such
@@ -56,7 +85,26 @@ as lack of explainability, susceptibility to adversarial attacks (data poisoning
 \citep{hochreiterBroadAI2022,garcezNeurosymbolicAI3rd2023}.
 
 
-\subsection{Adaptive AI}
+\subsection{Adaptive Artificial Intelligence}
+
+There is a lack of literature specifically about the aspect of \textit{adaptability} of \textit{hybrid} intelligent
+systems. Some have researched the adaptability of AI systems as part of strategy games: the reward functions in
+reinforcement learning algorithms can be designed to consider the effect of their behavior on the other agents
+participating in the strategy game towards reaching a common goal \citep{madeiraDesigningReinforcementLearningBased2006}.
+In a single-agent reinforcement learning setting, the agent is trained based on its actions and the state of the 
+environment. In a multi-agent reinforcement learning (MARL) setting, the agent is trained based on the effect 
+of its actions on the environment while consider potential (re)actions of the other agents
+\citep{caneseMultiAgentReinforcementLearning2021}. Such MARL AI models thus show a high adaptability to
+their environment and other agents in the environment. However, in a real-life setting where AI systems have
+to interact with humans, it is not sufficient to adapt to the environment and other agents: the AI may also need
+to adapt to a variety of temporal changes occurring in the environment and in the composition of the society
+of other agents.
+
+
+
+Strategy games are interesting as they have some commonalities with
+enterprises: a group of agents is interacting, and each agent is taking decisions towards reaching a common goal.
+Strategy game AIs could hence be used to derive insights for the setting in enterprises.
 
 Adaptive AI: AI can adapt to user's specific needs. This can be part of a recommender system or a decision support
 system that adapts according to the input received by users. As such, hybrid AI systems that are loosely coupled can 
@@ -64,33 +112,21 @@ be seen as adaptive AI systems. On the other hand, adaptive AI can also mean tha
 environment, be it new data (adapting the AI to new data, i.e., retraining with new or more data or continuous online
 learning of the AI model) or new use cases (adapting the task of the AI model).
 
-\subsubsection{Foundation Models}
+Safety of adaptive AI: it may learn and apply wrong strategies, quality of the incoming data stream may degrade 
+over time, hence degrading the model's performance. Such degrading can be slowly happening over time, so that it 
+is difficult to detect.
 
-\begin{itemize}
-    \item Language Models (LMs)
-    \item neural networks trained of vast amounts of data, including on multimodal data (text, images, speech, video)
-    \item Good at a variety of tasks, often the performance of LMs is closed to that of specialized model
-    \item However, they show several limitations in their capabilities in reasoning and information retrieval. 
-    \item Thus the terms "Foundation Model" was proposed by researchers at the Human-centered AI (HAI) institute of Stanford University
-\end{itemize}
-
-\begin{itemize}
-    \item Foundation models represent a paradigm shift in AI
-    \item ChatGPT as a chatbot is highly interactive: user has to prompt AI (althoug it is an unexplainable black box)
-    \item Emerging capability in foundation models: in-context learning 
-    \item In-context learning is highly adaptable: AI can learn from examples in the prompt 
-\end{itemize}
-
-\subsubsection{Limitations of Foundation Models}
+Further, highly adaptive systems pose a threat to the explainability of the system, as today's decision from 
+the system might be totally different from the yesterday's decisions, making it hard for humans to understand
+how the system works.
 
 \subsubsection{Hybrid Intelligent Approaches Involving Foundation Models}
 
 \begin{itemize}
     \item Agents 
-    \item Mixed architecture, e.g., MRKL
+    \item Mixed architecture, e.g., MRKL \citep{@karpasMRKLSystemsModular2022}
     \item Using the model as IR agent 
 \end{itemize}
-
 
 \subsection{Design Principles for Hybrid Intelligent Systems}
 
