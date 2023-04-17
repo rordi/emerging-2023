@@ -87,24 +87,23 @@ as lack of explainability, susceptibility to adversarial attacks (data poisoning
 
 \subsection{Adaptive Artificial Intelligence}
 
-There is a lack of literature specifically about the aspect of \textit{adaptability} of \textit{hybrid} intelligent
-systems. Some have researched the adaptability of AI systems as part of strategy games: the reward functions in
-reinforcement learning algorithms can be designed to consider the effect of their behavior on the other agents
-participating in the strategy game towards reaching a common goal \citep{madeiraDesigningReinforcementLearningBased2006}.
-In a single-agent reinforcement learning setting, the agent is trained based on its actions and the state of the 
-environment. In a multi-agent reinforcement learning (MARL) setting, the agent is trained based on the effect 
-of its actions on the environment while consider potential (re)actions of the other agents
-\citep{caneseMultiAgentReinforcementLearning2021}. Such MARL AI models thus show a high adaptability to
-their environment and other agents in the environment. However, in a real-life setting where AI systems have
-to interact with humans, it is not sufficient to adapt to the environment and other agents: the AI may also need
-to adapt to a variety of temporal changes occurring in the environment and in the composition of the society
-of other agents.
+Adaptive AI refers to the adaptability of the AI on its environment. Some have researched the adaptability of AI
+systems as part of strategy games: the reward functions in reinforcement learning algorithms can be designed to consider
+the effect of their behavior on other participating agents \citep{madeiraDesigningReinforcementLearningBased2006}.
+In a single-agent reinforcement learning setting, the agent is trained based on its actions and the state of the
+environment. In a multiagent reinforcement learning (MARL) setting, the agent is trained based on the effect of its
+actions on the environment while consider potential (re)actions of the other agents \citep{caneseMultiAgentReinforcementLearning2021}.
+AI models trained through MARL thus show a high adaptability to other agents in the environment. However, MARL applications
+face challenges which make them hard to use in real-world applications, including limitations in the scalability to settings
+with large numbers of agents, and the non-stationarity of the environment \citep{caneseMultiAgentReinforcementLearning2021}. 
+Further, AI in hybrid intelligent systems may also need to adapt to a variety of temporal changes occurring in the environment
+and in the composition of the group of agents \citep{akataResearchAgendaHybrid2020}. Nevertheless, strategy games with a
+multitude of agents working towards a common goal are an interesting subject as they share some commonalities with enterprises:
+a group of agents is interacting, and each agent is taking decisions towards reaching a common goal.
 
 
-
-Strategy games are interesting as they have some commonalities with
-enterprises: a group of agents is interacting, and each agent is taking decisions towards reaching a common goal.
-Strategy game AIs could hence be used to derive insights for the setting in enterprises.
+\cite{kabudiAIenabledAdaptiveLearning2021} reviewed the literature regarding learning systems used in education
+that utilize some form of AI that adapts to the user. 
 
 Adaptive AI: AI can adapt to user's specific needs. This can be part of a recommender system or a decision support
 system that adapts according to the input received by users. As such, hybrid AI systems that are loosely coupled can 
