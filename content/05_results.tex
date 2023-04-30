@@ -1,56 +1,43 @@
 \section{Results}
 \label{sec:results}
 
-\subsection{Hypotheses}
-
-Hypotheses from the literature:
-
-\begin{itemize}
-    \item \textit{"[Humans] overestimate the range of expertise of an automated system and deploy it for tasks at which it is not competent"} \citep[p. 19]{akataResearchAgendaHybrid2020}
-    \item \textit{"AI systems [...] were not designed with societal values such as fairness, accountability, and transparency in mind"} \citep[p. 19]{akataResearchAgendaHybrid2020}
-\end{itemize}
-
-
-
-\subsection{Typical Editorial Process}
-
-The typical editorial process for a manuscript submitted to a scholarly journal looks like the following:
-
-\begin{itemize}
-    \item Reviewer reads the manuscript.
-    \item Editor makes decision.
-\end{itemize}
-
-
-\subsection{Potential Use Cases For (Hybrid) AI in the Editorial Process}
+\subsection{The Editorial Process}
 
 A simplified, typical editorial process -- from writing to the final decision -- for a manuscript submitted to a scholarly journal is shown in
 Figure ~\ref{fig:bpmnEditorialProcess}. The process includes at least three parties: the author who writes the manuscript, the editor of the
 journal or conference chair that coordinates the peer-review process, and the peer-reviewers that review and comment on a manuscript. Towards
 the end of the writing process, the author will start to think about the journal (or conference) where he/she wants to submit the paper to.
 Once the author identified a journal, the manuscript has to be formatted to meet the submission requirements of the journal. 
+{\color{purple} @todo: textual description of process steps \dots}
+
+\begin{figure*}[htb]
+    \centering
+    \includegraphics[width=\linewidth]{editorial_process.pdf}
+    \caption{A simplified, typical editorial process from writing the manuscript to the final decision of acceptance or
+    rejection for publication (in BPMN 2.0). For better understanding, the process steps performed by outside parties 
+    are also modelled and the process starts with the outside party (author) writing the manuscript. The numbers
+    indicate the sequence flow of the process.}
+    \label{fig:bpmnEditorialProcess}
+\end{figure*}
+
+\subsection{Use Cases For AI in the Editorial Process}
 
 Table  ~\ref{tab:editorialProcess} shows an overview of the use cases for hybrid AI systems for each step in the typical editorial process.
-
 {\color{purple} @todo: then we can pick those areas where adaptive hybrid AI could be interesting and reason why so\dots}
+
+
+\subsection{Step XY}
 
 {\color{purple} @todo: then we can pick exactly one adaptive hybrid AI use case, draw 1-2 hypotheses that we can research 
 during the workshop\dots}
 
 
 \begin{landscape}
-    \begin{figure*}[htb]
-        \centering
-        \includegraphics[width=\linewidth]{editorial_process.pdf}
-        \caption{A simplified, typical editorial process from writing the manuscript to the final decision of acceptance or
-        rejection for publication (in BPMN 2.0). For better understanding, the process steps performed by outside parties 
-        are also modelled and the process starts with the outside party (author) writing the manuscript. The numbers
-        indicate the sequence flow of the process.}
-        \label{fig:bpmnEditorialProcess}
-    \end{figure*}
-
     \begin{table}[htb]
-        \caption{Typical editorial processing steps and use cases for (hybrid) AI for a scholarly journal.}
+        \caption{
+            Typical editorial processing steps and use cases for (hybrid) AI for a scholarly journal.
+            {\color{purple} @todo: refine table \dots}
+        }
         \label{tab:editorialProcess}
         \renewcommand{\arraystretch}{1.25}
         \small\centering

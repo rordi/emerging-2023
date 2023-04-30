@@ -94,34 +94,41 @@ Although foundation models seem to be highly adaptable, they lack to meet the cr
 \subsection{Adaptive AI}
 
 There are several aspects to adaptability of AI systems in the context of human-AI interaction. AI systems may
-require:
-\begin{itemize}
-    \item adaptation to different users' needs,
-    \item adaptation to various user tasks,
-    \item adaptation to human teammates for human-AI joint task completion,
-    \item adaptation to other autonomous (or human agents) in the environment, or
-    \item adaptation to a changing environment.
-\end{itemize}
+require: adaptation to different users' needs; adaptation to various user tasks; adaptation to human teammates for human-AI
+joint task completion; adaptation to other autonomous (or human agents); or adaptation to a changing environment.
 
 \subsubsection{Different Users' Needs}
 
-\cite{kabudiAIenabledAdaptiveLearning2021} reviewed the literature regarding learning systems used in education
-that utilize some form of AI that adapts to the user. 
-{\color{purple} @todo}
-
+Different users may want to use an AI system in different ways. As an example, a recommender system should
+provide recommendations that are pertinent to a particular user. Further, such recommender systems may learn
+additional feedback from each user by tracking if recommendations that were given to a particular user were
+followed. Thus, such an AI system may learn and adapt to the needs of each individual user. 
+In particular, recommender systems can leverage graph-based learning techniques by using a graph representation
+of user-related data \citep{zhangRecommendingGraphsComprehensive2023}. According to \cite{dengRecommenderSystemsBased2022},
+data in graph representations may include \textit{user-item interactions} (clicks, browsing, views), \textit{side information}
+(connections to other users, such as followed and following users) and \textit{knowledge}. Such graph learning recommender
+systems (GLRS) can overcome the cold-start and data sparsity problems commonly observed in recommender systems
+\citep{zhangRecommendingGraphsComprehensive2023}. However, \cite{liaoUserTrustRecommendation2022} found that user had
+more trust in recommender system based on collaborative filtering, regardless of the system's performance.
 
 \subsubsection{Various User Tasks}
-{\color{purple} @todo}
 
+An AI system may need to adapt to different tasks that the user wants to perform. The ability of in-context learning makes
+foundation model highly adaptable as they do not need task-specific fine-tuning \citep{brownLanguageModelsAre2020}. This opens
+the possibility to use foundation models in a wide variety of tasks where only little task-specific training data is available.
+Yet, the user may have to learn how to effectively prompt a foundation model to obtain the desired results. \cite{dangHowPromptOpportunities2022}
+have identified \textit{lack of guidance} leading to a trial and error approach, \textit{lack of representation} and \textit{time delays}
+due to the computational costs as the main challenges for users to effectively prompt generative AI models. Also, users may need to
+learn completely new strategies, such as \textit{chain of thought} prompting \citep{weiChainofThoughtPromptingElicits2023} and 
+\textit{least-to-most} prompting \citep{zhouLeasttoMostPromptingEnables2023}
 
 \subsubsection{Joint Task Completion}
 
-As AI becomes ubiquitous, teams are exploring ways to integrate AI agents and robots in their work towards
-achieving common goals. \cite{zhaoRoleAdaptationCollective2022} distinguish four ways how the AI agents may need
-to adapt in the context of a team: (1) adaption to goals and intentions of the human teammates; (2) adaptation
-to cognitive features of the human; (3) adaptation to physical factors of the human in robot-human interactions
-(e.g., fatigue of the human); and (4) adaptation of learned human models to transfer a learned model to the
-interaction with another human.
+An AI system may adapt to the user in the context of a joint task completion. As AI becomes ubiquitous, teams are exploring ways to
+integrate AI-based agents and robots in their work towards achieving common goals. \cite{zhaoRoleAdaptationCollective2022} distinguish
+four ways how such AI agents may need to adapt in the context of a team: adaption to goals and intentions of the human teammates;
+adaptation to cognitive features of the human; adaptation to physical factors of the human in robot-human interactions (e.g., fatigue
+of the human); and adaptation of learned human models to transfer a learned model to the interaction with another human.
 
 \cite{hauptmanAdaptOvercomePerceptions2023} propose that the role and contribution of AI agents 
 {\color{purple} @todo}
@@ -147,18 +154,13 @@ a group of agents is interacting, and each agent is taking decisions towards rea
 \subsubsection{Changing Environment}
 
 Societal trends, political or legal changes, etc. can lead to changes in the objectives that AI models were designed for
-(\textit{concept drift}) or changes in the data distribution (\textit{data drift}). 
-
-The 
-is referred to as \textit{concept drift} \citep{luDatadrivenDecisionSupport2020}
-
-
-to . To adapt to such changes in the environment an AI model can
-be retrained with training data that reflects the new reality. A common problem that arises when periodically or continuously
-retraining (i.e., online training) models is \textit{model drift}: as the quality or distribution of the new data may shift
-over time, the performance of the model might be slowly degrading \citep{nelsonEvaluatingModelDrift2015}. Thus, while retraining
-is needed to adapt the AI system to changes in the environment, great care has to be taken to detect model drift while accounting
-for data drift by retraining and evaluating models periodically with current \textit{and} high quality data.
+(\textit{concept drift}) or changes in the data distribution (\textit{data drift}) \citep{luDatadrivenDecisionSupport2020}.
+To adapt to such changes in the environment an AI model can be retrained with training data that reflects the new reality.
+Another common problem that arises when periodically or continuously retraining (i.e., online training) models is \textit{model drift}:
+as the quality or distribution of the new data may shift over time, the performance of the model might be slowly degrading
+\citep{nelsonEvaluatingModelDrift2015}. Thus, while retraining is needed to adapt the AI system to changes in the environment,
+great care has to be taken to detect model drift while accounting for concept drift and data drift by retraining and evaluating
+models periodically with current \textit{and} high quality data.
 
 
 \subsubsection{Adaptability in Hybrid AI Systems}
@@ -172,55 +174,63 @@ dengRecommenderSystemsBased2022}.
 Similarly, a decision support system that is trained on a specific set of data may
 need to be retrained when the data changes or when new decision possibilities are introduced. {\color{purple} @todo}
 
-\subsection{Design Principles for Hybrid Intelligent Systems}
 
-Hybrid AI systems can be represented by a boxology notation with common design patterns \citep{harmelenBoxologyDesignPatterns2019,
-vanbekkumModularDesignPatterns2021,witschelVisualizationPatternsHybrid2021}.
 
-\cite{ostheimerAllianceHumansMachines2021} developed a framework of eight principles for the design of human-in-the-loop (HITL) 
-computing. They argue that such hybrid systems achieve higher accuracy and reliability of machine learning algorithms. Using a 
-case in the manufacturing industry, they showed that the efficiency of operational processes could be increased by applying an 
-algorithm that followed these design principles \citep{ostheimerAllianceHumansMachines2021}.
-
+%\subsection{Design Principles for Hybrid Intelligent Systems}
+%
+%Hybrid AI systems can be represented by a boxology notation with common design patterns \citep{harmelenBoxologyDesignPatterns2019,
+%vanbekkumModularDesignPatterns2021,witschelVisualizationPatternsHybrid2021}.
+%
+%\cite{ostheimerAllianceHumansMachines2021} developed a framework of eight principles for the design of human-in-the-loop (HITL) 
+%computing. They argue that such hybrid systems achieve higher accuracy and reliability of machine learning algorithms. Using a 
+%case in the manufacturing industry, they showed that the efficiency of operational processes could be increased by applying an 
+%algorithm that followed these design principles \citep{ostheimerAllianceHumansMachines2021}.
+%
 % box with HITL design principles
-{
-    \begin{center}
-        \vskip 0.2in
-        \fcolorbox{gray}{white}{
-        \parbox{0.85\textwidth}{
-        \textbf{Box 1. HITL Computing Design principles \citep{ostheimerAllianceHumansMachines2021}.}
-        \begin{enumerate}
-            \item Principle of client-designer relationship: designers should aim for mutual knowledge exchange with clients to foster the understanding
-                    of which aspects of a system are influenced by human or artificial intelligence.
-            \item Principle of sustainable design: designers should keep up to date with the latest progress in the field of AI and apply the latest and
-                    lasting AI techniques.
-            \item Principle of extended vision
-            \item Principle of AI-readiness
-            \item Principle of hybrid intelligence
-            \item Principle of use-case marketing
-            \item Principle of power relationship
-            \item Principle of human-AI trust
-        \end{enumerate}}}
-        \vskip 0.2in
-    \end{center}
-}
-
-
-\subsection{Types of Hybrid Intelligent Systems}
-
-\begin{itemize}
-    \item Expert systems 
-    \item Decision support systems
-    \item Recommender algorithms with human decision-making
-    \item Case-based reason systems
-\end{itemize}
-
-\subsection{Enterprise Competitiveness}
-
-{\color{purple} @todo: what are the aspects of and factors increasing the competitiveness of enterprises?}
+%{
+%    \begin{center}
+%        \vskip 0.2in
+%        \fcolorbox{gray}{white}{
+%        \parbox{0.85\textwidth}{
+%        \textbf{Box 1. HITL Computing Design principles \citep{ostheimerAllianceHumansMachines2021}.}
+%        \begin{enumerate}
+%            \item Principle of client-designer relationship: designers should aim for mutual knowledge exchange with clients to foster the understanding
+%                    of which aspects of a system are influenced by human or artificial intelligence.
+%            \item Principle of sustainable design: designers should keep up to date with the latest progress in the field of AI and apply the latest and
+%                    lasting AI techniques.
+%            \item Principle of extended vision
+%            \item Principle of AI-readiness
+%            \item Principle of hybrid intelligence
+%            \item Principle of use-case marketing
+%            \item Principle of power relationship
+%            \item Principle of human-AI trust
+%        \end{enumerate}}}
+%        \vskip 0.2in
+%    \end{center}
+%}
+%
+%
+%\subsection{Types of Hybrid Intelligent Systems}
+%\begin{itemize}
+%    \item Expert systems 
+%    \item Decision support systems
+%    \item Recommender algorithms with human decision-making
+%    \item Case-based reason systems@amitBusinessModelInnovation2010
+%\end{itemize}
+%
+%
+%\subsection{Enterprise Competitiveness}
+%{\color{purple} @todo: what are the aspects of and factors increasing the competitiveness of enterprises?}
 
 
 \subsection{Competitive Advantage Through AI}
+
+{\color{purple} @todo rewrite, find more papers}
+
+\subsubsection{Business Model Innovation}
+
+\cite{}
+
 
 \cite{xuCanArtificialIntelligence2021} found that post COVID-19 companies using AI in their products grew
 faster than their peers. However, they could not observe evidence of the same effect before COVID-19, indicating
