@@ -1,0 +1,37 @@
+Feedback on Paper, 03.05.2023
+-----------------------------
+
+- Emanuele is a bit concerned about the Table 1: the use-cases are too much focused on the collaborative aspect rather than adaptability. We are not just interested about common AI-human goal, but how the AI can adapt to the human to better support him/her in achieving the goal.
+- How to learn from each other? AI learns from human, e.g. foundation model fine-tuning, in-context learning within prompts
+
+--> this needs to be better reflected in the Table 1: may be add a column on the role of adaptability in the use-cases?
+
+
+Research & Workshop
+-------------------
+
+- refelect on the hypothesis to research
+- check the evaluation criteria shared by Emanuele
+- reverse engineer the criteria to the hypothesis
+- try to find a paper on a framework for evaluation of adaptability of AI (probably there is none)
+- search again for papers directly in arXiv (may have more recent ones, especially on foundation models)
+  
+
+Adaptability Criteria
+---------------------
+
+- importance of the different criteria
+- give students a challenge and let them think about a (partial) solution
+- as the researcher we can then analyze the solution and see if it is in line with the criteria / literature
+- e.g. prompt engineering
+
+--> confront the students with a scenario and let them think about a solution
+
+Example: literature search e.g. for emerging topics papers. How could an adaptive AI help the researcher to find the right papers? What would be the criteria for a good solution? What is the role of adaptability in this case?
+
+ChatPDF -> upload documents and query the system for answers to questions based on the document content (systems adapts to user's content & user's questions)
+
+Presentation
+------------
+
+- Include slides on recommender systems, graph-based recommender systems, cold start problem and data sparsity problems
