@@ -11,9 +11,14 @@
 \usepackage{nicefrac}       % compact symbols for 1/2, etc.
 \usepackage{microtype}      % microtypography
 \usepackage{setspace}		% line spacing
+\usepackage{etoolbox}		% for conditional statements
+\AtBeginEnvironment{tabular}{\tiny}
 \usepackage{lipsum}
 \usepackage{graphicx}
 \usepackage{tabularx}
+\newcolumntype{s}{>{\hsize=.05\hsize}X}
+\newcolumntype{m}{>{\hsize=.2\hsize}X}
+\newcolumntype{l}{>{\hsize=.4\hsize}X}
 \usepackage{pdflscape}
 \usepackage{doi}
 \renewcommand{\doitext}{}	% avoid "doi: doi:" in references lists
@@ -72,13 +77,13 @@
 	pdffitwindow=true,
 	colorlinks=true,
 	allcolors=black,
-	hidelinks=false,
-	hyperfootnotes=false,
+	%hidelinks=false,
+	%hyperfootnotes=false,
 	pdfstartview={FitH},
 	pdfpagemode=UseNone,
 	pdftitle={Enhancing Enterprise Competitiveness through Adaptive AI Systems},
 	pdfauthor={Dietrich Rordorf},
-	pdfkeywords={artificial intelligence, hybrid intelligence, adaptive AI systems, enterprise competitiveness},
+	pdfkeywords={artificial intelligence, hybrid intelligence, adaptive AI systems, enterprise competitiveness}
 }
 
 \begin{document}
