@@ -75,26 +75,35 @@
 	unicode=true,
 	bookmarksopen={true},
 	pdffitwindow=true,
-	colorlinks=true,
-	allcolors=black,
+	colorlinks=false,
+	urlbordercolor=cyan,
+	linkbordercolor=cyan,
+	citebordercolor=cyan,
 	%hidelinks=false,
 	%hyperfootnotes=false,
 	pdfstartview={FitH},
 	pdfpagemode=UseNone,
-	pdftitle={Enhancing Enterprise Competitiveness through Adaptive AI Systems},
 	pdfauthor={Dietrich Rordorf},
-	pdfkeywords={artificial intelligence, hybrid intelligence, adaptive AI systems, enterprise competitiveness}
+	pdftitle={Enhancing Enterprise Competitiveness through Adaptive AI Systems},
+	pdfkeywords={artificial intelligence, hybrid intelligence, adaptive AI systems, enterprise competitiveness}	
 }
 
 \begin{document}
 
 %%% Title page
 \maketitle
+
+%%% Declaration of authenticity
+\newpage
+\input{content/00_declaration}
+
+%%% Abstract
+\newpage
 \input{content/01_abstract}
 
 %%% Table of contents
-% \newpage
-% \tableofcontents
+\newpage
+\tableofcontents
 
 %%% Content sections
 \newpage
