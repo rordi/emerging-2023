@@ -2,8 +2,8 @@
 const rawInput = process.argv[2];
 let inputData = rawInput;
 
-inputData = removeWhiteSpaces(inputData);
-inputData = replaceLeadingDoubleZeroWithPlusSign(inputData);
+//inputData = removeWhiteSpaces(inputData);
+//inputData = replaceLeadingDoubleZeroWithPlusSign(inputData);
 
 console.log('Input data', inputData);
 
@@ -57,4 +57,23 @@ function guessInputType(input) {
     }
 }
 
-console.log('Input type', guessInputType(inputData));
+//console.log('Input type', guessInputType(inputData));
+
+const express = require('express');
+const app = express();
+const port = 3000;
+
+app.get('/guess', (req, res) => {
+    let inputData = req.query.input;
+    // url decode input
+    inputData = decodeURIComponent(inputData);
+    inputData = removeWhiteSpaces(inputData);
+    inputData = replaceLeadingDoubleZeroWithPlusSign(inputData);
+    const inputType = guessInputType(inputData);
+
+    res.send(inputType);
+});
+
+app.listen(port, () => {
+    console.log(`Example app listening at http://localhost:${port}`);
+});

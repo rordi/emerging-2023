@@ -1,0 +1,22 @@
+// function to validate a Swiss phone number
+
+// function to validate a Swiss mobile phone number
+
+// function to validate a French phone number
+
+// function to validate a German phone number
+
+// function to validate an email address
+
+// function to replace leading double zero with plus sign in numeric input
+
+// function to remove white spaces from input
+
+// function to guess input type, returns 'phone_ch', 'mobile_ch', 'phone_de_fr' or 'email'
+
+// get input type from command line argument 
+
+// guess the input type and print it to the console
+
+// if time allows: express app exposing a route as API endpoint
+// npm install --save express

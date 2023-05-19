@@ -11,3 +11,5 @@ paper-blx.bib
 paper.bcf
 paper.run.xml
 .DS_Store
+demo/node_modules
+demo/.env
