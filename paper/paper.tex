@@ -1,35 +1,59 @@
-\documentclass{article}
+\documentclass[11pt, oneside]{article}
 
 \usepackage{arxiv}
 
-\usepackage{hyperref}       % hyperlinks (but not footnotes: bug points links to titlepage)
+\usepackage[hyperfootnotes=false]{hyperref}       % hyperlinks (but not footnotes: bug points links to titlepage)
 \usepackage{url}            % simple URL typesetting
 \usepackage{booktabs}       % professional-quality tables
 \usepackage{amsfonts}       % blackboard math symbols
 \usepackage[T1]{fontenc}	% font encoding
-\usepackage{palatino}		% font typefaces
 \usepackage{nicefrac}       % compact symbols for 1/2, etc.
 \usepackage{microtype}      % microtypography
 \usepackage{setspace}		% line spacing
 \usepackage{etoolbox}		% for conditional statements
-\AtBeginEnvironment{tabular}{\tiny}
 \usepackage{lipsum}
 \usepackage{graphicx}
 \usepackage{tabularx}
 \newcolumntype{s}{>{\hsize=.05\hsize}X}
 \newcolumntype{m}{>{\hsize=.2\hsize}X}
 \newcolumntype{l}{>{\hsize=.4\hsize}X}
-\usepackage{pdflscape}
-\usepackage{doi}
+\usepackage{ragged2e}
+\newcolumntype{L}[1]{>{\hsize=#1\hsize\RaggedRight} X} % define a new column type for convenience
+\usepackage{pdflscape}		% for landscape pages, e.g. for large tables and figures
+\usepackage{doi}			% for DOI links
 \renewcommand{\doitext}{}	% avoid "doi: doi:" in references lists
+\usepackage{changepage}		% provides adjustwidth environment
+\usepackage{xcolor}			% for colored text
+\usepackage{minitoc}		% for mini table of contents per chapter
+\usepackage{csquotes}		% for block quotes using displayquote
 
-\usepackage{xcolor}
+%%
+%% Hyperlinks format
+%%
+\hypersetup{
+	unicode=true,
+	bookmarksopen={true},
+	pdffitwindow=true,
+	colorlinks=false,
+	urlbordercolor=cyan,
+	linkbordercolor=cyan,
+	citebordercolor=cyan,
+	%hidelinks=false,
+	%hyperfootnotes=false,
+	pdfstartview={FitH},
+	pdfpagemode=UseNone,
+	pdfauthor={Dietrich Rordorf},
+}
 
-% References format
+%%
+%% References format
+%%
 \usepackage[natbibapa]{apacite} % APA 6th ed. styling for citations and references list
 \bibliographystyle{apacite}
 
-
+%%
+%% Path to figures
+%%
 \graphicspath{{figures/}}
 
 %%
@@ -42,9 +66,9 @@
 %%
 %% Line spacing
 %%
-\setstretch{1.32} 
+\setstretch{1.4}
 
-\title{Exploring the Role of Adaptive Hybrid Intelligent Systems on Competitive Advantage Using a Case From the Scholarly 	Publishing Industry}
+\title{Exploring the Role of Adaptive Hybrid Intelligent Systems on Competitive Advantage Using The Example of Scholarly Publishing}
 
 \author{Dietrich Rordorf\\
 	\href{mailto:dietrichhanspaul.rordorf@students.fhnw.ch}{dietrichhanspaul.rordorf@students.fhnw.ch} \\
@@ -59,7 +83,7 @@
 }
 \date{
 	MSc Business Information Systems Program \\
-	Emerging Topics, SS 2023
+	Emerging Topics, Spring Semester 2023
 }
 
 % Uncomment to remove the date

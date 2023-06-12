@@ -13,3 +13,4 @@ Rordorf
 Laurenzi
 Riggenbachstrasse
 Olten
+connectionist

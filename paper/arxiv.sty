@@ -3,25 +3,38 @@
 \ProcessOptions\relax
 
 % fonts
-\renewcommand{\rmdefault}{ppl}
-\renewcommand{\sfdefault}{phv}
+\usepackage{fourier}		% font typefaces
+\renewcommand{\rmdefault}{put}
+\renewcommand{\sfdefault}{put}
 
 
 % set page geometry
 \usepackage[verbose=false,a4paper]{geometry}
 \AtBeginDocument{
   \newgeometry{
-    textheight=8.6in,
-    textwidth=6.3in,
-    top=1.7in,
-    headheight=30pt,
-    headsep=40pt,
-    footskip=40pt
+    paper=a4paper, % A4: 210 x 297 mm
+    layoutvoffset=36mm, % Top offset
+    layouthoffset=23mm, % Left offset
+    layoutwidth=164mm, % Width of text area
+    layoutheight=235mm, % Height of text area
+    hmargin=0mm,
+    vmargin=0mm,
+    left=0mm,
+    right=0mm,
+    top=0mm,
+    bottom=0mm,
+    headsep=15mm,
   }
 }
 
-\widowpenalties=3 10000 10000 150
-\raggedbottom
+% widows and orphans
+\raggedbottom                     % allow blank space on bottom of pages
+\setlength{\topskip}{1\topskip \@plus 5\p@}
+\doublehyphendemerits=9999        % No consecutive line hyphens.
+\brokenpenalty=9999               % No broken words across columns/pages.
+\widowpenalties=3 9999 500 0      % Almost no widows at bottom of page.
+\clubpenalty=9999                 % Almost no orphans at top of page.
+\interfootnotelinepenalty=9999    % Almost never break footnotes.
 \sloppy
 
 \newcommand{\headeright}{A Preprint}
@@ -192,7 +205,6 @@
   \let\maketitle\relax
   \let\thanks\relax
 }
-
 % rules for title box at top of first page
 \newcommand{\@toptitlebar}{
   \hrule height 2\p@
@@ -212,11 +224,11 @@
   \vbox{%
     \hsize\textwidth
     \centering
-    {\LARGE \@title\par}
-    \@bottomtitlebar
-    \vskip 0.4in
+    \vskip 4cm
+    {\huge\bf \@title\par}
+    \vskip 0.5cm
     \textit{\undertitle\\}
-    \vskip 0.4in
+    \vskip 1.5cm
     \def\And{%
       \end{tabular}\hfil\linebreak[0]\hfil%
       \begin{tabular}[t]{c}\normalsize\bf\rule{\z@}{24\p@}\ignorespaces%

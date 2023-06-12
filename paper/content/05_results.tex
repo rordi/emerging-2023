@@ -1,67 +1,144 @@
 \section{Results}
 \label{sec:results}
 
-This section first gives an overview of a typical editorial process in the setting of scholarly communication. Then, the potential
-for hybrid intelligent systems (with a focus on adaptability) as part of the editorial process is discussed. Finally, we derive two
-hypotheses and subject them to qualitative feedback from a group of students in business information systems ($n = 25$).
+This section presents the results. Based on the findings from the literature review in Section \ref{sec:literature},
+mostly based on \citet{iansitiCompetingAgeAI2020,hoArtificialIntelligenceFirm2022}, we define the following dimensions
+for assessing the competitive advantage of AI systems:
 
-\subsection{The Editorial Process}
+\begin{enumerate}
+    \item Reduced costs: AI streamlines processes and reduces the costs of performing processes.
+    \item Improved performance: AI improves the performance of the processes.
+    \item Better decision-making: AI helps with data-driven decision-making.
+    \item Higher customer satisfaction: AI contributes to higher customer satisfaction.
+    \item Better customer segmentation: AI helps to better segment and better target customers.
+    \item Improved customer experience: AI improves the customer experience.
+    \item Better products \& services: AI enables product and service innovations.
+    \item Business innovation: AI enables new business models.
+\end{enumerate}
 
-A simplified, typical editorial process for a manuscript submitted to a journal -- from writing the manuscript to the final decision of
-acceptance or rejection -- is shown in Figure ~\ref{fig:bpmnEditorialProcess}. The process includes at least three parties: the author who
-writes the manuscript, the editor of the journal (or conference chair) that coordinates the peer-review process, and the peer-reviewers
-that review and comment on a manuscript. For some journals the editor could be two persons: an academic editor, such as an \textit{Editor-in-Chief},
-taking the decisions on manuscripts after peer-review, and an internal editorial staff coordinating the editorial process.
+\vspace{0.4cm}
 
-The typical editorial process involves several steps that must be completed in a particular order. First, the author writes the manuscript
-with the research results. Once the manuscript is complete, the author searches for an appropriate journal to submit it to. Next, the author
-formats the manuscript according to the specific instructions of the chosen journal (i.e., as a Microsoft Word or \LaTeX~document). The author
-then submits the manuscript files to the journal for consideration and peer-review. 
+\noindent The types of competitive advantages are subsequently used to assess the potential of adaptive hybrid AI systems.
+Table~\ref{tab:editorialProcess} shows an overview of potential use cases for hybrid AI for each step in the typical editorial process
+introduced previously in Section~\ref{sec:literature}. In the following we will focus on 4 areas of use cases, which correspond to the 
+4 scenarios presented in Appendix \ref{appendix:scenarios}. The 4 use cases of AI are focused on the following topics: how can adaptive
+and hybrid AI contribute to the competitive advantage of an enterprise by (1) facilitating the process of writing a manuscript; (2) helping
+authors to find appropriate journals to submit to and format the paper according to the journal's style; (3) improving the desk
+review process; and (4) improving the process of finding peer-reviewers. Each of these 4 domains is discussed in more detail in the
+following subsections, including presenting the use cases, discussing the competitive advantage for a scholarly publisher of
+implementing the use case, and contrasting with the qualitative feedback from the focus group participants.
 
-Once the journal receives the manuscript, the editor performs a desk review to assess whether the manuscript meets the journal's requirements
-and stated scope. If the editor finds that the manuscript could be a good fit for the journal, they will search for potential reviewers who
-have expertise in the manuscript's subject. Depending on the journal and publisher, this task could be performed by the editorial staff of
-the journal or by an external academic editor. In cases where the editor is an academic editor, they will typically search for reviewers
-themselves. In cases where the editor is an internal editorial staff, they will typically use a reviewer recommendation system to search
-for potential reviewers. Reviewer candidates are typically selected based on their expertise, previous publications, and after checking 
-their conflicts of interests (e.g., if they have co-authored a paper with the author in the past). The editor will then invite reviewers
-that passed the screening to evaluate the manuscript, i.e., invite them to peer-review the manuscript. If the reviewers accept the invitation,
-they will be granted access to the manuscript, read it and write a review report that details their feedback and recommendations (typically
-split into a part addressed to authors, and another part addressed to the editors of the journal). 
+\subsection{Writing a Manuscript}
 
-After all review reports have been received, the editor will read and assess each one. Based on the reviews, the editor will make a first
-decision on whether to accept, reject, or request revisions to the manuscript. If revisions are required, the author will revise the manuscript
-according to the review reports and asked to resubmit the revised version to the journal. The editor will then check the revised manuscript
-and make a final decision on whether to accept it for publication in the journal.
+\subsubsection*{Adaptive and Hybrid AI Use Cases}
+Writing a scholarly manuscript involves several tasks, such as literature search, summarization of key findings, and writing-up the
+literature review. This is a time-consuming task that requires a lot of effort from the author. Hybrid AI could help to automate aspects
+of the literature search process. For example, AI could recommend relevant papers based on the authors' previous publications and search
+history. Whenever the author reads a paper, the author could classify it according to some user-defined criteria, e.g., ``relevant'',
+``not relevant'', ``method'', ``result'' and categorized by topics. Humans would thus steer the classification scheme, while the AI could
+learn to adapt to the user by identifying relevant papers and classifying them according to the user's preferences. Such an adaptive AI
+could automatically screen new recent literature to expand the author's collection while continuously collecting additional feedback from
+the author to refine the recommendations. Finally, when the user writes its manuscript, the AI can recommend relevant papers from the
+collection based on the context and narrative in the author's manuscript.
 
-\begin{landscape}
-    \begin{figure*}[htb]
-        \centering
-        \includegraphics[width=\linewidth]{editorial_process.pdf}
-        \caption{A simplified, typical editorial process from writing the manuscript to the final decision of acceptance or
-        rejection for publication (in BPMN 2.0). For better understanding, the process steps performed by outside parties 
-        are also modelled and the process starts with the outside party (author) writing the manuscript. The numbers
-        indicate the sequence flow of the process.}
-        \label{fig:bpmnEditorialProcess}
-    \end{figure*}
-\end{landscape}
+Further, the system could remind authors
+on particular manuscript sections to include, the order of sections, and automatically formatting the manuscript according to the journal's
+style. Some sections, such as funding, conflict of interest, and data availability statements, could be automatically adjusted to the journal's 
+preferred wording. In case of doubt, the LLM could offer a chatbot interface to answer questions that the author may have about specific format
+and style issues. The author could thus receive pertinent feedback based on the context of the manuscript and the journal it is being 
+written for.
 
-\subsection{Use Cases For AI in the Editorial Process}
+Another frequent problem in writing the manuscript are language issues. Many scholars are not native English speakers but have to
+communicate their results in that language, especially in the natural and social sciences. An adaptive AI could help to improve the
+writing and language quality of manuscripts by providing suggestions for (re)writing sentences. Because the author may have his own
+preferred style of writing, the AI learns to adapt to the author's style and provide suggestions that are improving the clarity and
+grammatical correctness of the text, while still following the author's style. 
 
-Table  ~\ref{tab:editorialProcess} shows an overview of the use cases for hybrid AI systems for each step in the typical editorial process.
-{\color{purple} @todo: then we can pick those areas where adaptive hybrid AI could be interesting and reason why so\dots}
+\subsubsection*{Competitive Advantages} 
+A writing assistant system based on a LLM that helps authors in writing their manuscript could constitute a competitive advantage for 
+publishers as authors could write papers faster. Submission processes for journals could be integrated into the writing process, thereby
+increasing the process efficiency. A recent study cited in \textit{Nature} estimated that time authors spent on formatting manuscripts
+could be worth 230 million USD annually \citep{kozlovRevealedMillionsDollars2023,clotworthySavingTimeMoney2023}. A writing assistant
+system could help to reduce this time and hence increase the efficiency of the writing process. This would also translate into a better
+customer experience for the author. Using an LLM as a writing assistant could also streamline later peer-review and production processes.
+As papers that will be submitted to the  publisher are in a clearer language, efficient peer-review and decision-making is facilitated.
+This translates into faster turnaround times and better cost efficiency in the peer-review and subsequent production process (i.e.,
+copy-editing, typesetting, proofreading).
+
+\subsubsection*{Findings}
+A group of 6 participants was presented with the first scenario of writing a manuscript and asked to discuss the competitive 
+advantages of such a system based on adaptive hybrid AI. As part of their discussion, the participants mentioned better decision-making
+(arguing in the perspective of an author): if the literature review is automated by an AI system that can adapt to the users' preferences, 
+the system could help authors to make better decisions on which papers to cite. This would further free up time for authors
+to focus on the actual content of the paper. This finding does not directly explain a competitive advantage for the
+publisher. However, as the process is more effective for the author, the author may write more papers and hence submit 
+more manuscripts to the publisher. We could therefore categorize this finding as ``Improved performance''. Similarly, the participants
+mentioned that an AI system could act as a writing assistant for foreign language authors by offering automated translations, which 
+they considered to be of type ``Improved customer experience''.
 
 
-\subsection{Step XY}
 
-{\color{purple} @todo: then we can pick exactly one adaptive hybrid AI use case, draw 1-2 hypotheses that we can research 
-during the workshop\dots}
+\subsection{Finding Appropriate Journals \& Formatting}
+
+\subsubsection*{Adaptive and Hybrid AI Use Cases}
+
+When an author has finished writing the manuscript, the next step is to find an appropriate journal to submit the manuscript to.
+Authors may typically have some journals that they regularly read in mind to potentially submit their paper to. However, given that 
+manuscripts are often rejected after peer-review, an AI system that adapts to the user's preferred journals---yet has the capability 
+to predict which journal is most likely to accept the manuscript---could be a valuable tool for authors to reduce the time to publication.
+The AI system could learn the author's preferred journals from its previous publications but also from journals typically cited by the author
+in its previous paper. Additionally, the author could provide input data, such as if the journal needs to be covered in a specific
+index or if the journal needs to be open access. Further, the AI system can learn patterns of acceptance and rejection of manuscripts
+in different journals. While data on rejections are not publicly available, the AI system could learn from the author's own previous
+submissions and rejections. The acceptance, however, can be learned from public data as the accepted manuscripts end up being published, 
+i.e., constitute publicly available data. The AI system could then present a ranking of journals that match with the user's preferences
+and are most likely to accept the manuscript.
+
+\subsubsection*{Competitive Advantages} 
+
+A publisher offering such a journal finder and ranking system to guide authors in finding appropriate journals could have a competitive
+advantage due to  faster publication times and higher customer satisfaction. The faster publication time is due to lower overall 
+probability of rejection, while higher satisfaction is due to fewer rejections and fast time to publication. The AI system could also
+be used to recommend journals that are not yet on the author's radar. This could be a competitive advantage for the publisher as it
+could increase the total number of submissions to the publisher's journals, including smaller and more specialized journals. Publishers 
+may also recommend that authors publish their significant or very novel papers in more prestigious journals with higher publication 
+charges (assuming an open access publisher that charges authors for publication).
+
+\subsubsection*{Findings}
+
+A group of 8 participants was presented with the second scenario of finding appropriate journals and adjusting the manuscript to the
+journal's style. The participants discussed the potential competitive advantages of such a system using adaptive hybrid AI. The group 
+argued that most benefits would be of type "Improved performance" as the system would help authors to find better suited journals and
+hence reduce rejections. Further, For publishers, this would translate to less editorial work (reduced workload) for peer-reviewing
+papers that finally get rejected. Further, as the system would format manuscripts according to the journal's style, the publisher has
+less editing efforts. This was seen as a competitive advantage of both types, "Reduced costs" and "Improved performance". This 
+finding also links back to the writing assistant in scenario 1, as the writing assistant could already format the manuscript according
+to the journal's style.
+
+\subsection{Editor Desk Review}
+
+\subsubsection*{Adaptive and Hybrid AI Use Cases}
+
+We now leave the author's perspective and move to the editor's perspectives. After the author has submitted the manuscript, an editor
+will perform the initial desk review of the manuscript. The editor will check if the manuscript is within the scope of the journal, if
+it is of sufficient quality, and formatted according to the journal's style. Desk review is an important step as it allows filtering out
+unsuitable manuscripts early in the process. This saves time and resources for peer-reviewing and editing of manuscripts that will be
+likely rejected anyway.
+
+\subsubsection*{Competitive Advantages} 
+\subsubsection*{Findings}
+
+
+\subsection{Finding Peer-Reviewers}
+\subsubsection*{Adaptive and Hybrid AI Use Cases}
+\subsubsection*{Competitive Advantages} 
+\subsubsection*{Findings}
 
 
 \begin{landscape}
     \begin{table}[htb]
         \caption{
-            Typical editorial processing steps and use cases for (hybrid) AI for a scholarly journal.
+            Typical editorial processing steps for a journal manuscript and use cases for adaptive hybrid AI.
         }
         \label{tab:editorialProcess}
 
@@ -69,56 +146,67 @@ during the workshop\dots}
         \renewcommand{\arraystretch}{1.1}
         \small\centering
         \setlength\tabcolsep{8pt}
-        \begin{tabularx}{\linewidth}{s m l X X}
+        \begin{tabularx}{\linewidth}{L{0.05} L{0.2} L{0.35} L{0.35}}
             \toprule
-            \textbf{Step} & \textbf{Role} & \textbf{Task} & \textbf{AI Use Cases} & \textbf{Adaptability Aspect} \\
+            \textbf{Step} & \textbf{Role / Task} & \textbf{AI Use Cases} & \textbf{Adaptability Aspect} \\
             \midrule
 
-            \circled{1} & Author & Writes manuscript & 
+            \circled{1} & Author writes manuscript & 
                 Literature search, literature recommendation, summarization of key findings, writing (auto-completion), translating, grammar and spell-checking &
                 AI adapts to user by learning what papers are relevant, recommends more similar papers, and expands to related concepts. \linebreak
                 AI suggests auto-completions and corrections based on the \textit{user's writing style} and the context of the manuscript.
-                \\ 
+                \\
+            \midrule
 
-            \circled{2} & Author & Searches for journals to submit to & Journal recommendation &
-                AI adapts to user by learning what journals are relevant to the user (journals read / cited, and journals previously published in)
+            \circled{2} & Author searches journal to submit to & Journal recommendation &
+                AI adapts to user by learning what journals are relevant to the user (journals read, cited, previously published in)
                 and recommends more similar journals.
                 \\
+            \midrule
 
-            \circled{3} & Author & Formats paper to meet journal's requirements & Manuscript conversion and styling & 
+            \circled{3} & Author formats paper to meet journal requirements & Manuscript conversion and styling & 
                 AI learns styles of journals and adapts its output to the journal selected by user \\
+            \midrule
 
-            \circled{4} & Author & Submits paper to a journal & Extraction of metadata & (Adaptability not required) \\
-
-            \circled{5} & Editor & Receives manuscript submission & Summarization of key findings & (Adaptability not required) \\
+            \circled{4} & Author submits paper & Extraction of metadata & (Adaptability not required) \\
+            \midrule
             
-            \circled{6} & Editor & Conducts desk review of the manuscript & Checks of the manuscript, including detecting plagiarism, tortured phrases
-                ("paraphrased plagiarism"), generated papers, biased or inappropriate language, off-topic references, fabricated or manipulated images,
-                potentially inappropriate authorship, controversial topics, etc. & AI needs to adapt to recent literature (e.g., plagiarism check needs
+            \circled{5} & Editor receives submission & Summarization of key findings & (Adaptability not required) \\
+            \midrule
+            
+            \circled{6} & Editor conducts desk review & Checks of the manuscript: detecting plagiarism, tortured phrases,
+                generated papers, bias, inappropriate language, off-topic references, manipulated images, inappropriate authorship, etc.
+                & AI needs to adapt to recent literature (e.g., plagiarism check needs
                 to account for latest literature) and detecting new methods of generating papers.\\ 
+            \midrule
 
-            \circled{7} & Editor & Searches for potential reviewers & Semantic search (in vector space using word embeddings), graph embeddings,
+            \circled{7} & Editor searches potential reviewers & Semantic search (in vector space using word embeddings), graph embeddings,
                 review assignment algorithms using e.g., knowledge graph to exclude potential reviewers with conflicts of interest & AI needs to
                 adapt to recent literature and previous reviewer preferences of the editor \\ 
+            \midrule
 
-            \circled{8} & Editor & Invites potential reviewers to review & E-mail writing, generate summary of the manuscript &
+            \circled{8} & Editor invites potential reviewers & E-mail writing, generate summary of the manuscript &
                 AI should learn the user's writing style and typical wording from previous examples. \\
+            \midrule
 
-            \circled{9} & Reviewer & Reads the manuscript & Summarization of key findings, checking of the content of cited references &
+            \circled{9} & Reviewer reads manuscript & Summarization of key findings, checking of the content of cited references &
                 AI needs to adapt to recent cited literature. \\ 
+            \midrule
 
-            \circled{10} & Reviewer & Writes review report & Writing (auto-completion) of qualitative review report: help reviewer to avoid biases,
+            \circled{10} & Reviewer writes review report & Writing (auto-completion) of qualitative review report: help reviewer to avoid biases,
                 inappropriate feedback, lack of specificity & (Adaptability not required) \\ 
+            \midrule
 
-            \circled{11} & Editor & Reads all review reports & Checking of the quality of the peer-review report: detect biases, inappropriate 
+            \circled{11} & Editor reads review reports & Checking of the quality of the peer-review report: detect biases, inappropriate 
                 language, generic / non-specific feedback, ad hominem criticism, off-topic comments, etc.  & (Adaptability not required) \\ 
+            \midrule
 
-            \circled{12} & Editor & Makes decision on manuscript & Summarization of peer-review outcome for decision letter
+            \circled{12} & Editor makes decision & Summarization of peer-review outcome for decision letter
                 to author & AI should learn the user's writing style and typical wording from previous examples. \\ 
+            \midrule
 
-            \circled{13} & Author & Revises manuscript & Checking that reviewer concerns are being addressed, writing (auto-completion) of
+            \circled{13} & Author revises manuscript & Checking that reviewer concerns are being addressed, writing (auto-completion) of
                 rebuttal letter to the reviewers \& editors & AI should learn the user's writing style and typical wording from previous examples. \\
-                
             \bottomrule
         \end{tabularx}
     \end{table}
